@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+body{
+    text-align: center;
+    align-items: center;
+}
+.containerg{
+    background: #161623;
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: -50% -50%;
+    z-index: 1;
+}
+.containerg::before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(#2196f3, #e91e63);
+clip-path: circle(30% at right 70%);
+}
+.containerg::after{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(#2196f3, #e91e63);
+clip-path: circle(30% at 10% 10%);
+}
+
+.containerg .cardg{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    z-index: 1;
+    margin: 20px 20px;
+    padding: 18px 14px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    border-left: 1px solid rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.1);
+    /* transition: 0.5s ease-in-out; */
+}
+.containerg .cardg .contentg{
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.7s;
+}
+.containerg .cardg:hover .contentg{
+    transform: translateY(-410px);
+    opacity: 1;
+    /* transition: 0.3s ease-in-out; */
+}
+.containerg .cardg .contentg h1{
+    margin: 50px 0px;
+    color: #fff;
+}
+
+
+.containerg .cardg .contentg p{
+    padding: 10px;
+    margin: 32px 0px;
+    color: #fff;
+    font-weight: 200;
+}
+.containerg .cardg .contentg a{
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-bottom: 29px;
+    margin: -10px 0px;
+    font-weight: 600;
+    padding: 8px 20px;
+    box-shadow: 0 5px 15px 0.2;
+}
+.containerg .cardg .photo{
+    transform: translateY(0px);
+    transition: 0.7s;
+}
+.containerg .cardg:hover .photo{
+    transform: translateY(600px);
+}
+
+.containerg .cardg .photo img{
+    border-radius: 20px;
+}
